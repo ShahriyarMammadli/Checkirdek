@@ -1,0 +1,48 @@
+page-chat {
+    .tip {
+        width: 0px;
+        height: 0px;
+        position: absolute;
+        background: transparent;
+        border: 10px solid #bff9ff;
+      }
+      
+      .tip-left {
+        top: 10px;
+        left: -22px;
+        border-top-color: transparent;
+        border-left-color: transparent;
+        border-bottom-color: transparent;  
+      }
+      
+      .tip-right {
+        top: 10px;
+        right: -22px;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: transparent;  
+      }
+      
+      .dialogbox .body {
+        position: relative;
+        max-width: 300px;
+        height: auto;
+        margin: 5px 10px;
+        padding: 5px;
+        background-color: #bff9ff;
+        border-radius: 10px;
+        border: 3px solid #bff9ff;
+      }
+      
+      .body .message {
+        min-height: 30px;
+        border-radius: 7px;
+        font-family: Courier New;
+        font-size: 16px;
+        line-height: 1;
+        color: #797979;
+      }
+      .back-col{
+          background-color: #fff9ba;
+      }
+}

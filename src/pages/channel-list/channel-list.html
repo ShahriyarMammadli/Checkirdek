@@ -1,0 +1,21 @@
+
+<ion-header>
+  <ion-navbar color="primary" hideBackButton="true">
+      <ion-buttons starts>
+          <button ion-button icon-only menuToggle>
+            <ion-icon name = "menu"></ion-icon>
+          </button>
+        </ion-buttons>
+        
+    <ion-title>Channel List</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>  
+        <ion-card *ngFor="let item of channelItemRef | async; let i = index;" detail-push navPush="ChannelPage" [navParams] = "{item: item, i: i}" >  
+        <img src="{{item.ch_logo_link}}">
+        </ion-card>
+    </ion-list>
+</ion-content>

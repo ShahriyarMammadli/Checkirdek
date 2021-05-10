@@ -1,0 +1,39 @@
+
+<ion-header>
+    <ion-navbar color="primary">
+      <ion-title>Kanal</ion-title>
+    </ion-navbar> 
+  </ion-header>
+  
+  
+  <ion-content padding>
+      <ion-list>
+          <ion-list-header>Programs</ion-list-header>
+          <ion-card *ngFor="let programs of channel.program_list; let i = index;" detail-push (click)="programClick(i)" > 
+              <img src="{{programs.prog_img_link}}">
+                <ion-card-content>
+                    <p>{{programs.prog_name}}</p>
+                </ion-card-content>
+                <ion-row>
+                    <ion-col>
+                      <button ion-button icon-left clear small>
+                        <ion-icon name="thumbs-up"></ion-icon>
+                        <div>Likes</div>
+                      </button>
+                    </ion-col>
+                    <ion-col>
+                        <button ion-button (click)="commentView(programs.content)" icon-left clear small>
+                            <ion-icon name="text"></ion-icon>
+                            <div> comments</div>
+                        </button>
+                    </ion-col>
+                  </ion-row>
+                    <ion-list *ngIf = "commentViewStatus">
+                      <ion-item>
+                        <h2>Finn</h2>
+                        <p>I've had a pretty messed up day. If we just...</p>
+                      </ion-item>
+                    </ion-list>
+          </ion-card>
+        </ion-list>
+  </ion-content>
